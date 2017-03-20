@@ -33,4 +33,6 @@
 
 + (UIColor *)RFViewBgColor;
 
++ (UIColor *)TwitterColor;
+
 @end

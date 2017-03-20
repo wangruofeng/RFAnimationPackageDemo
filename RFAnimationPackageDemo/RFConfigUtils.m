@@ -20,4 +20,9 @@
     return RGB(242, 242, 242);
 }
 
++ (UIColor *)TwitterColor
+{
+    return RGB(29, 161, 242);
+}
+
 @end

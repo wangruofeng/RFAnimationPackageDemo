@@ -31,7 +31,7 @@
     shelterView.backgroundColor = [UIColor whiteColor];
     [view addSubview:shelterView];
     
-    self.window.backgroundColor = RGB(29, 161, 242);
+    self.window.backgroundColor = [UIColor TwitterColor];
     
     CAKeyframeAnimation *logoAnimation = [CAKeyframeAnimation animationWithKeyPath:@"bounds"];
     logoAnimation.beginTime = CACurrentMediaTime() + 1;
