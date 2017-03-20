@@ -17,6 +17,7 @@
                                        blue:b/255.0f \
                                       alpha:a]
 #define RGB(r,g,b)    RGBa(r,g,b,1.0)
+#define RGB3(x)       RGBa(x,x,x,1.0)
 
 // UIColorFromRGB(0xBC1128)
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

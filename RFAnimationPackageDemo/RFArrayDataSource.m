@@ -64,6 +64,7 @@
     return self;
 }
 
+#pragma mark - Others
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {

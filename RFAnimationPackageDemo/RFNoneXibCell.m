@@ -7,6 +7,7 @@
 //
 
 #import "RFNoneXibCell.h"
+#import "RFNavigationModel.h"
 
 @implementation RFNoneXibCell
 
@@ -17,15 +18,20 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
-- (void)setTitle:(NSString *)title {
-    if (_title != title) {
-        _title  = title;
+- (void)setModel:(id)model {
+    if (_model != model) {
+        _model = model;
         
-        self.textLabel.text = title;
+        if ([model isKindOfClass:[RFNavigationModel class]]) {
+            RFNavigationModel *naviModel = (RFNavigationModel *)model;
+            self.textLabel.text = [NSString stringWithFormat:@"%@ - %@",naviModel.appName, naviModel.featureName];
+        } else {
+            self.textLabel.text = @"doesn't supported model!";
+        }
     }
 }
 

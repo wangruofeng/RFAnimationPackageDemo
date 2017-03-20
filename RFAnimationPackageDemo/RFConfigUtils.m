@@ -17,7 +17,7 @@
 
 + (UIColor *)RFViewBgColor
 {
-    return RGB(242, 242, 242);
+    return RGB3(245);
 }
 
 + (UIColor *)TwitterColor

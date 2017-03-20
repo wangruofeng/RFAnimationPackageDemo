@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4BF7341E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BF7331E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.m */; };
+		0E4BF7381E7FD03F000FDE59 /* RFNavigationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BF7371E7FD03F000FDE59 /* RFNavigationModel.m */; };
+		0E4BF73F1E7FD4EA000FDE59 /* RFJikeAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BF73E1E7FD4EA000FDE59 /* RFJikeAnimationVC.m */; };
+		0E4BF7421E7FD4FE000FDE59 /* RFYouTubeAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BF7411E7FD4FE000FDE59 /* RFYouTubeAnimationVC.m */; };
 		0E95003F1E7FAE7E00505743 /* RFAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95003E1E7FAE7E00505743 /* RFAnimationVC.m */; };
 		0E9500431E7FAF0200505743 /* RFConfigUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9500421E7FAF0200505743 /* RFConfigUtils.m */; };
 		0EA7E9D91E7AD7030034642A /* RFNoneXibCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7E9D81E7AD7030034642A /* RFNoneXibCell.m */; };
@@ -42,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4BF7321E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+Extensions.h"; sourceTree = "<group>"; };
+		0E4BF7331E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+Extensions.m"; sourceTree = "<group>"; };
+		0E4BF7361E7FD03F000FDE59 /* RFNavigationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNavigationModel.h; sourceTree = "<group>"; };
+		0E4BF7371E7FD03F000FDE59 /* RFNavigationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNavigationModel.m; sourceTree = "<group>"; };
+		0E4BF73D1E7FD4EA000FDE59 /* RFJikeAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFJikeAnimationVC.h; sourceTree = "<group>"; };
+		0E4BF73E1E7FD4EA000FDE59 /* RFJikeAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFJikeAnimationVC.m; sourceTree = "<group>"; };
+		0E4BF7401E7FD4FE000FDE59 /* RFYouTubeAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFYouTubeAnimationVC.h; sourceTree = "<group>"; };
+		0E4BF7411E7FD4FE000FDE59 /* RFYouTubeAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFYouTubeAnimationVC.m; sourceTree = "<group>"; };
 		0E95003D1E7FAE7E00505743 /* RFAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAnimationVC.h; sourceTree = "<group>"; };
 		0E95003E1E7FAE7E00505743 /* RFAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAnimationVC.m; sourceTree = "<group>"; };
 		0E9500411E7FAF0200505743 /* RFConfigUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFConfigUtils.h; sourceTree = "<group>"; };
@@ -98,6 +110,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4BF7391E7FD048000FDE59 /* Categoray */ = {
+			isa = PBXGroup;
+			children = (
+				0E4BF7321E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.h */,
+				0E4BF7331E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.m */,
+			);
+			name = Categoray;
+			sourceTree = "<group>";
+		};
+		0E4BF73A1E7FD05C000FDE59 /* Utilts */ = {
+			isa = PBXGroup;
+			children = (
+				0E9500411E7FAF0200505743 /* RFConfigUtils.h */,
+				0E9500421E7FAF0200505743 /* RFConfigUtils.m */,
+			);
+			name = Utilts;
+			sourceTree = "<group>";
+		};
+		0E4BF73B1E7FD068000FDE59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E4BF7361E7FD03F000FDE59 /* RFNavigationModel.h */,
+				0E4BF7371E7FD03F000FDE59 /* RFNavigationModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0E4BF73C1E7FD070000FDE59 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EAC15371E7AC7B0001B237A /* ViewController.h */,
+				0EAC15381E7AC7B0001B237A /* ViewController.m */,
+				0E95003D1E7FAE7E00505743 /* RFAnimationVC.h */,
+				0E95003E1E7FAE7E00505743 /* RFAnimationVC.m */,
+				0EAC15681E7ACFE6001B237A /* RFBaseVC.h */,
+				0EAC15691E7ACFE6001B237A /* RFBaseVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0E4BF7431E7FD504000FDE59 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0E4BF73D1E7FD4EA000FDE59 /* RFJikeAnimationVC.h */,
+				0E4BF73E1E7FD4EA000FDE59 /* RFJikeAnimationVC.m */,
+				0E4BF7401E7FD4FE000FDE59 /* RFYouTubeAnimationVC.h */,
+				0E4BF7411E7FD4FE000FDE59 /* RFYouTubeAnimationVC.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		0E9500401E7FAE9200505743 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,14 +198,11 @@
 			children = (
 				0EAC15341E7AC7B0001B237A /* AppDelegate.h */,
 				0EAC15351E7AC7B0001B237A /* AppDelegate.m */,
-				0EAC15371E7AC7B0001B237A /* ViewController.h */,
-				0EAC15381E7AC7B0001B237A /* ViewController.m */,
-				0E95003D1E7FAE7E00505743 /* RFAnimationVC.h */,
-				0E95003E1E7FAE7E00505743 /* RFAnimationVC.m */,
-				0EAC15681E7ACFE6001B237A /* RFBaseVC.h */,
-				0EAC15691E7ACFE6001B237A /* RFBaseVC.m */,
-				0E9500411E7FAF0200505743 /* RFConfigUtils.h */,
-				0E9500421E7FAF0200505743 /* RFConfigUtils.m */,
+				0E4BF7431E7FD504000FDE59 /* Animation */,
+				0E4BF73C1E7FD070000FDE59 /* Controller */,
+				0E4BF73B1E7FD068000FDE59 /* Model */,
+				0E4BF73A1E7FD05C000FDE59 /* Utilts */,
+				0E4BF7391E7FD048000FDE59 /* Categoray */,
 				0E9500401E7FAE9200505743 /* Cell */,
 				0EAC15641E7ACCD0001B237A /* RFArrayDataSource.h */,
 				0EAC15651E7ACCD0001B237A /* RFArrayDataSource.m */,
@@ -318,12 +378,16 @@
 			files = (
 				0EAC15661E7ACCD0001B237A /* RFArrayDataSource.m in Sources */,
 				0EAC15391E7AC7B0001B237A /* ViewController.m in Sources */,
+				0E4BF7341E7FC733000FDE59 /* CAKeyframeAnimation+Extensions.m in Sources */,
+				0E4BF7381E7FD03F000FDE59 /* RFNavigationModel.m in Sources */,
 				0EAC15361E7AC7B0001B237A /* AppDelegate.m in Sources */,
+				0E4BF7421E7FD4FE000FDE59 /* RFYouTubeAnimationVC.m in Sources */,
 				0E95003F1E7FAE7E00505743 /* RFAnimationVC.m in Sources */,
 				0EAC156A1E7ACFE6001B237A /* RFBaseVC.m in Sources */,
 				0EAC15331E7AC7B0001B237A /* main.m in Sources */,
 				0EA7E9DD1E7AD7130034642A /* RFXibCell.m in Sources */,
 				0EA7E9D91E7AD7030034642A /* RFNoneXibCell.m in Sources */,
+				0E4BF73F1E7FD4EA000FDE59 /* RFJikeAnimationVC.m in Sources */,
 				0E9500431E7FAF0200505743 /* RFConfigUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

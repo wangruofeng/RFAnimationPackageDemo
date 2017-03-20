@@ -45,7 +45,7 @@
 - (void)setUpTableView;
 {
 	
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight - 20)
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
                                                   style:UITableViewStylePlain];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 20;
@@ -61,8 +61,8 @@
 					   ];
 	self.dataSource = [[RFArrayDataSource alloc]initWithItems:items
 												cellClassName:@"RFNoneXibCell"
-										   configureCellBlock:^(RFNoneXibCell *cell, NSString *item) {
-											   cell.title = item;
+										   configureCellBlock:^(RFNoneXibCell *cell, id model) {
+											   cell.model = model;
 										   }];
 	self.tableView.dataSource = self.dataSource;
 	[self.tableView reloadData];

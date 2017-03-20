@@ -11,14 +11,24 @@
 
 typedef void (^RFConfigureCellBlock)(id cell ,id item);
 
+/**
+ for UITableViewDataSource
+ */
 @interface RFArrayDataSource : NSObject<UITableViewDataSource>
 
-// for UITableViewDataSource
-// without xib
+///=============================================================================
+///   without xib
+///=============================================================================
+
 - (instancetype)initWithItems:(NSArray *)items
                 cellClassName:(NSString *)cellClassName
            configureCellBlock:(RFConfigureCellBlock)configureCellBlock;
-// with xib
+
+
+///=============================================================================
+///   with xib
+///=============================================================================
+
 - (instancetype)initWithItems:(NSArray *)items
                   cellNibName:(NSString *)cellNibName
            configureCellBlock:(RFConfigureCellBlock)configureCellBlock;

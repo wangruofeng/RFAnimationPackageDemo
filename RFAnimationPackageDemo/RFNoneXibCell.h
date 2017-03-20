@@ -10,6 +10,6 @@
 
 @interface RFNoneXibCell : UITableViewCell
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) id model;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RFConfigUtils.h"
+#import "CAKeyframeAnimation+Extensions.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self addTwitterLoadingAnimation];
+    
+    return YES;
+}
+
+- (void)addTwitterLoadingAnimation {
+    
+    self.window.backgroundColor = [UIColor TwitterColor];
+    
     UIView *view = self.window.rootViewController.view;
     
     CALayer *logoLayer = [CALayer new];
@@ -27,44 +37,21 @@
     logoLayer.contents = (id)[UIImage imageNamed:@"logo"].CGImage;
     view.layer.mask = logoLayer;
     
-    UIView *shelterView = [[UIView alloc] initWithFrame:view.frame];
+    UIView *shelterView = [[UIView alloc] initWithFrame:view.bounds];
     shelterView.backgroundColor = [UIColor whiteColor];
+    
     [view addSubview:shelterView];
     
-    self.window.backgroundColor = [UIColor TwitterColor];
+    CAKeyframeAnimation *zoomAnimation = [CAKeyframeAnimation zoomAnimation];
+    CAKeyframeAnimation *transformAnimation = [CAKeyframeAnimation transformAnimation];
     
-    CAKeyframeAnimation *logoAnimation = [CAKeyframeAnimation animationWithKeyPath:@"bounds"];
-    logoAnimation.beginTime = CACurrentMediaTime() + 1;
-    logoAnimation.duration = 1;
-    logoAnimation.keyTimes = @[@0,@0.4, @1];
-    logoAnimation.values = @[
-                             [NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)],
-                             [NSValue valueWithCGRect:CGRectMake(0, 0, 85, 85)],
-                             [NSValue valueWithCGRect:CGRectMake(0, 0, 4500, 4500)]
-                             ];
-    logoAnimation.timingFunctions = @[
-                                      [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
-                                      [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault],
-                                      ];
-    logoAnimation.removedOnCompletion = false;
-    logoAnimation.fillMode = kCAFillModeForwards;
-    [logoLayer addAnimation:logoAnimation forKey:@"zoomAnimation"];
+    [logoLayer addAnimation:zoomAnimation forKey:@"zoomAnimation"];
+    [view.layer addAnimation:transformAnimation forKey:@"transformAnimation"];
     
-    
-    CAKeyframeAnimation *mainViewAnimation = [CAKeyframeAnimation animationWithKeyPath:@"animation"];
-    mainViewAnimation.beginTime = CACurrentMediaTime() + 1.1;
-    mainViewAnimation.duration = 0.6;
-    mainViewAnimation.keyTimes = @[@0, @0.5, @1];
-    mainViewAnimation.values = @[
-                                 [NSValue valueWithCATransform3D:CATransform3DIdentity],
-                                 [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1.1, 1.1, 1)],
-                                 [NSValue valueWithCATransform3D:CATransform3DIdentity]
-                                 ];
-    
-    [view.layer addAnimation:mainViewAnimation forKey:@"transformAnimation"];
+    /// reset transform
     view.layer.transform = CATransform3DIdentity;
     
-    ///
+    /// remove shelterView
     [UIView animateWithDuration:0.3 delay:1.4 options:UIViewAnimationOptionCurveLinear animations:^{
         shelterView.alpha = 0;
     } completion:^(BOOL finished) {
@@ -72,10 +59,7 @@
         view.layer.mask = nil;
     }];
     
-    
-    return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
