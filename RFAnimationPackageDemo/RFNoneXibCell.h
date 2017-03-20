@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RFNoneXibCell.h
 //  RFAnimationPackageDemo
 //
 //  Created by 王若风 on 3/16/17.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RFBaseVC.h"
 
-@interface ViewController : RFBaseVC
+@interface RFNoneXibCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *title;
 
 @end
-

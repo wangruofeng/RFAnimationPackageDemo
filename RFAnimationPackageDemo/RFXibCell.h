@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RFXibCell.h
 //  RFAnimationPackageDemo
 //
 //  Created by 王若风 on 3/16/17.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RFBaseVC.h"
 
-@interface ViewController : RFBaseVC
+@interface RFXibCell : UITableViewCell
 
+@property (nonatomic, strong) id model;
 
 @end
-

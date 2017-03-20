@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RFBaseVC.h
 //  RFAnimationPackageDemo
 //
 //  Created by 王若风 on 3/16/17.
@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RFBaseVC.h"
+#import "RFConfigUtils.h"
 
-@interface ViewController : RFBaseVC
-
+@interface RFBaseVC : UIViewController
 
 @end
-
